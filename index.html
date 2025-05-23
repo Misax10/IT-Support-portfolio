@@ -12,6 +12,7 @@
 
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
@@ -35,7 +36,8 @@
     }
   </script>
 </head>
-<body class="scroll-smooth scroll-pt-30 bg-light text-gray-800 font-sans leading-relaxed">
+<body class="bg-light dark:bg-gray-900 dark:text-white transition-all duration-300">
+
 
 
   <header class="bg-gradient-to-r from-primary via-secondary to-primary text-white text-center py-14 shadow-xl" data-aos="fade-down">
@@ -69,6 +71,7 @@
       <span class="group-hover:text-accent transition duration-300">Technical Skills</span>
       <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
     </a>
+    
   </div>
 </nav>
 
@@ -139,21 +142,39 @@
   </div>
 </section>
 
-  <section id="projects" class="bg-white max-w-4xl mx-auto mt-10 p-10 rounded-lg shadow-xl" data-aos="fade-up">
+  
+
+<section id="projects" class="bg-white max-w-4xl mx-auto mt-10 p-10 rounded-lg shadow-xl" data-aos="fade-up">
   <h2 class="text-2xl font-bold border-b pb-2 border-gray-200 mb-4">Projects</h2>
-  <h3 class="text-xl font-semibold">Help Desk Ticketing System</h3>
-  <p class="text-sm text-gray-600 mt-1"><strong>Technologies:</strong> Google Forms, Google Sheets, Python</p>
-  <ul class="list-disc list-inside mt-2 space-y-1 text-sm">
-    <li>Created Google Form with Name, Email, Issue Description, Priority</li>
-    <li>Linked form to Sheets for data capture and automatic Ticket ID creation</li>
-    <li>Added status tracking with Assigned To, Status, Notes columns</li>
-    <li>Visualized ticket data using Google Sheets dashboard tools</li>
-    <li>Built a Python script to email users about ticket status updates</li>
-  </ul>
-  <a href="https://docs.google.com/spreadsheets/d/1Z_zccMXD0fIWfQt4y_JUUEUQtPsYqYV6MHd3nEWGBNI"
-     class="inline-block mt-4 px-6 py-3 bg-accent text-white rounded hover:bg-blue-700 transition transform hover:scale-110" target="_blank">
-    View Project
-  </a>
+
+  <!-- Project Card Start -->
+  <div class="bg-gray-50 hover:bg-white border hover:shadow-2xl p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.01]">
+    <h3 class="text-xl font-semibold">Help Desk Ticketing System</h3>
+    <p class="text-sm text-gray-600 mt-1"><strong>Technologies:</strong> Google Forms, Google Sheets, Python</p>
+    
+    <ul class="list-disc list-inside mt-3 space-y-1 text-sm">
+      <li>Created Google Form with Name, Email, Issue Description, Priority</li>
+      <li>Linked form to Sheets for data capture and automatic Ticket ID creation</li>
+      <li>Added status tracking with Assigned To, Status, Notes columns</li>
+      <li>Visualized ticket data using Google Sheets dashboard tools</li>
+      <li>Built a Python script to email users about ticket status updates</li>
+    </ul>
+
+    <!-- Tech Icons -->
+    <div class="flex items-center gap-4 mt-4">
+      <img src="https://cdn.simpleicons.org/python/4B8BBE" alt="Python" class="w-6 h-6" title="Python" />
+      <img src="https://cdn.simpleicons.org/googleforms/673AB7" alt="Google Forms" class="w-6 h-6" title="Google Forms" />
+      <img src="https://cdn.simpleicons.org/googlesheets/34A853" alt="Google Sheets" class="w-6 h-6" title="Google Sheets" />
+    </div>
+
+    <a href="https://docs.google.com/spreadsheets/d/1Z_zccMXD0fIWfQt4y_JUUEUQtPsYqYV6MHd3nEWGBNI"
+       target="_blank"
+       class="inline-block mt-5 px-6 py-3 bg-accent text-white rounded-full hover:bg-blue-700 transition transform hover:scale-110 shadow">
+      View Project
+    </a>
+  </div>
+  <!-- Project Card End -->
+
 </section>
 
   
@@ -253,5 +274,20 @@
       once: true,
     });
   </script>
+  <script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+
+  toggleBtn.addEventListener('click', () => {
+    html.classList.toggle('dark');
+    localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+  });
+
+  // Auto-load saved theme
+  if (localStorage.getItem('theme') === 'dark') {
+    html.classList.add('dark');
+  }
+</script>
+
 </body>
 </html>
