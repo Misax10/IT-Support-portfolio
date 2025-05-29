@@ -8,6 +8,10 @@
 
     <!-- AOS Library for scroll animations -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
     <script>
@@ -270,17 +274,17 @@
           <img
             src="https://cdn.simpleicons.org/python/4B8BBE"
             alt="Python"
-            class="w-6 h-6"
+            class="w-10 h-10"
             title="Python" />
           <img
             src="https://cdn.simpleicons.org/googleforms/673AB7"
             alt="Google Forms"
-            class="w-6 h-6"
+            class="w-10 h-10"
             title="Google Forms" />
           <img
             src="https://cdn.simpleicons.org/googlesheets/34A853"
             alt="Google Sheets"
-            class="w-6 h-6"
+            class="w-10 h-10"
             title="Google Sheets" />
         </div>
 
@@ -330,24 +334,27 @@
         <!-- Tech Icons -->
         <div class="flex items-center gap-4 mt-4">
           <img
-            src="https://cdn.simpleicons.org/windows/0078D6"
-            alt="Windows"
-            class="w-6 h-6"
-            title="Windows" />
+            src="anydesk-logo.svg"
+            alt="AnyDesk"
+            class="w-20 h-10"
+            title="AnyDesk" />
+
+          <i class="fab fa-windows text-blue-600 text-xl"></i>
+          <!-- Windows -->
           <img
             src="https://cdn.simpleicons.org/zoom/2D8CFF"
             alt="Zoom"
-            class="w-6 h-6"
+            class="w-10 h-10"
             title="Zoom" />
           <img
             src="https://cdn.simpleicons.org/googledocs/34A853"
             alt="Google Docs"
-            class="w-6 h-6"
+            class="w-10 h-10"
             title="Google Docs" />
           <img
             src="https://cdn.simpleicons.org/github/181717"
             alt="GitHub"
-            class="w-6 h-6"
+            class="w-10 h-10"
             title="GitHub" />
         </div>
 
@@ -419,18 +426,34 @@
     </section>
 
     <section class="text-center my-16 px-4" data-aos="zoom-in">
-      <div
-        class="inline-block p-1 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 animate-glow">
-        <a
-          href="Khoa_Diep_CV_English_Version.pdf"
-          download
-          class="inline-block px-10 py-4 bg-white text-accent font-bold text-lg rounded-full shadow-2xl transform transition-all duration-300 hover:scale-110 hover:shadow-blue-400 hover:ring-4 hover:ring-blue-300 flex items-center gap-2">
-          <span class="text-2xl animate-bounce">⬇️</span>
-          Download My Resume (PDF)
-        </a>
+      <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+        <!-- English Resume Download -->
+        <div
+          class="inline-block p-1 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 animate-glow">
+          <a
+            href="Khoa_Diep_CV_English_Version.pdf"
+            download
+            class="inline-block px-10 py-4 bg-white text-accent font-bold text-lg rounded-full shadow-2xl transform transition-all duration-300 hover:scale-110 hover:shadow-blue-400 hover:ring-4 hover:ring-blue-300 flex items-center gap-2">
+            <span class="text-2xl animate-bounce">⬇️</span>
+            Resume (English)
+          </a>
+        </div>
+
+        <!-- Vietnamese Resume Download -->
+        <div
+          class="inline-block p-1 rounded-full bg-gradient-to-r from-green-400 via-yellow-400 to-red-500 animate-glow">
+          <a
+            href="Khoa_Diep_CV_Vietnamese_Version.pdf"
+            download
+            class="inline-block px-10 py-4 bg-white text-accent font-bold text-lg rounded-full shadow-2xl transform transition-all duration-300 hover:scale-110 hover:shadow-green-400 hover:ring-4 hover:ring-green-300 flex items-center gap-2">
+            <span class="text-2xl animate-bounce">⬇️</span>
+            Resume (Tiếng Việt)
+          </a>
+        </div>
       </div>
       <p class="mt-3 text-sm text-gray-600 italic">
-        Instant download of my professional resume (PDF format)
+        Instant download of my resume in both English and Vietnamese (PDF
+        format)
       </p>
     </section>
 
