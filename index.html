@@ -4,19 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Khoa Diep | IT Support Specialist </title>
+    
+    <!--Tailwind CSS Config-->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<link rel="stylesheet" href="css/style.css">
-    <!-- AOS Library for scroll animations -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
     <script>
       tailwind.config = {
         darkMode: "class",
@@ -42,7 +32,20 @@
         },
       };
     </script>
+    <!--External CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- AOS Library for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--External JS-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" ></script>
   </head>
+
   <body
     class="bg-light dark:bg-gray-900 dark:text-white transition-all duration-300">
     <header
@@ -51,7 +54,7 @@
       <h1 class="text-5xl font-extrabold">Khoa Diep</h1>
       <p class="text-xl mt-3">IT Support Specialist</p>
       <img
-        src="/assets/profile_picture.jpeg"
+        src="assets/profile_picture.jpeg"
         alt="Khoa Diep"
         class="w-36 h-36 mx-auto mt-6 rounded-full border-4 border-white shadow-xl hover:shadow-blue-400 transition duration-500 animate-glow" />
         <div class="mt-6 animate-bounce text-white text-2xl">
@@ -553,104 +556,7 @@
   </div>
 </footer>
 
-    <!-- Init AOS Animations -->
-    <script>
-      AOS.init({
-        duration: 1000,
-        once: true,
-      });
-    </script>
-    <script>
-      const toggleBtn = document.getElementById("theme-toggle");
-      const html = document.documentElement;
-
-      toggleBtn.addEventListener("click", () => {
-        html.classList.toggle("dark");
-        localStorage.setItem(
-          "theme",
-          html.classList.contains("dark") ? "dark" : "light"
-        );
-      });
-
-      // Auto-load saved theme
-      if (localStorage.getItem("theme") === "dark") {
-        html.classList.add("dark");
-      }
-    </script>
-
-  <script>
-  function showToast(message, color = 'bg-green-600') {
-    const toast = document.getElementById('toast');
-    const messageSpan = document.getElementById('toast-message');
-
-    toast.classList.remove('translate-x-full');
-    toast.classList.add(color);
-    messageSpan.textContent = message;
-    toast.style.display = 'flex';
-
-    setTimeout(() => {
-      hideToast();
-    }, 4000);
-  }
-
-  function hideToast() {
-    const toast = document.getElementById('toast');
-    toast.classList.add('translate-x-full');
-    setTimeout(() => {
-      toast.style.display = 'none';
-      toast.className = 'fixed bottom-6 right-6 z-50 hidden max-w-xs w-full px-6 py-4 rounded-lg shadow-lg text-white font-medium flex items-center justify-between transition-transform transform translate-x-full';
-    }, 300); // wait for slide-out animation to finish
-  }
-
-  const form = document.getElementById('contact-form');
-
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-
-    try {
-      const res = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (res.ok) {
-        form.reset();
-        showToast("✅ Message sent successfully!");
-      } else {
-        const data = await res.json();
-        if (data.errors) {
-          showToast("⚠️ " + data.errors.map(error => error.message).join(", "), 'bg-red-600');
-        } else {
-          throw new Error("Unknown error");
-        }
-      }
-    } catch (err) {
-      showToast("❌ Submission failed. Please try again.", 'bg-red-600');
-    }
-  });
-</script>
-<script>
-  const swiper = new Swiper(".mySwiper", {
-    effect: "slide",
-    grabCursor: true,
-    loop: true,
-    spaceBetween: 30,
-    
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-</script>
+   <script src="js/main.js"></script>
 
 
 
