@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Khoa Diep | IT Support Specialist</title>
+    <title>Khoa Diep | IT Support Specialist </title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
     <!-- AOS Library for scroll animations -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
@@ -51,6 +54,12 @@
         src="profile_picture.jpeg"
         alt="Khoa Diep"
         class="w-36 h-36 mx-auto mt-6 rounded-full border-4 border-white shadow-xl hover:shadow-blue-400 transition duration-500 animate-glow" />
+        <div class="mt-6 animate-bounce text-white text-2xl">
+  <a href="#summary">
+    <i class="fas fa-angle-down"></i>
+  </a>
+</div>
+
     </header>
 
     <nav
@@ -239,135 +248,92 @@
     </section>
 
     <section
-      id="projects"
-      class="bg-white max-w-4xl mx-auto mt-10 p-10 rounded-lg shadow-xl"
-      data-aos="fade-up">
-      <h2 class="text-2xl font-bold border-b pb-2 border-gray-200 mb-4">
-        Projects
-      </h2>
+  id="projects"
+  class="bg-white max-w-4xl mx-auto mt-10 p-10 rounded-lg shadow-xl"
+  data-aos="fade-up"
+  data-aos-delay="200"
+>
+  <h2 class="text-2xl font-bold border-b pb-2 border-gray-200 mb-6">Projects</h2>
 
-      <!-- Project Card Start -->
-      <div
-        class="bg-gray-50 hover:bg-white border hover:shadow-2xl p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.01]">
-        <h3 class="text-xl font-semibold">Help Desk Ticketing System</h3>
-        <p class="text-sm text-gray-600 mt-1">
-          <strong>Technologies:</strong> Google Forms, Google Sheets, Python
-        </p>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
 
-        <ul class="list-disc list-inside mt-3 space-y-1 text-sm">
-          <li>
-            Created Google Form with Name, Email, Issue Description, Priority
-          </li>
-          <li>
-            Linked form to Sheets for data capture and automatic Ticket ID
-            creation
-          </li>
-          <li>Added status tracking with Assigned To, Status, Notes columns</li>
-          <li>Visualized ticket data using Google Sheets dashboard tools</li>
-          <li>
-            Built a Python script to email users about ticket status updates
-          </li>
-        </ul>
+      <!-- Slide 1 -->
+      <div class="swiper-slide px-20">
+        <div class="bg-gray-50 hover:bg-white border hover:shadow-2xl p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.01]">
+          <h3 class="text-xl font-semibold">Help Desk Ticketing System</h3>
+          <p class="text-sm text-gray-600 mt-1">
+            <strong>Technologies:</strong> Google Forms, Google Sheets, Python
+          </p>
 
-        <!-- Tech Icons -->
-        <div class="flex items-center gap-4 mt-4">
-          <img
-            src="https://cdn.simpleicons.org/python/4B8BBE"
-            alt="Python"
-            class="w-10 h-10"
-            title="Python" />
-          <img
-            src="https://cdn.simpleicons.org/googleforms/673AB7"
-            alt="Google Forms"
-            class="w-10 h-10"
-            title="Google Forms" />
-          <img
-            src="https://cdn.simpleicons.org/googlesheets/34A853"
-            alt="Google Sheets"
-            class="w-10 h-10"
-            title="Google Sheets" />
+          <ul class="list-disc list-inside mt-3 space-y-1 text-sm">
+            <li>Created Google Form with Name, Email, Issue Description, Priority</li>
+            <li>Linked form to Sheets for data capture and automatic Ticket ID creation</li>
+            <li>Added status tracking with Assigned To, Status, Notes columns</li>
+            <li>Visualized ticket data using Google Sheets dashboard tools</li>
+            <li>Built a Python script to email users about ticket status updates</li>
+          </ul>
+
+          <div class="flex items-center gap-4 mt-4">
+            <img src="https://cdn.simpleicons.org/python/4B8BBE" alt="Python" class="w-10 h-10" />
+            <img src="https://cdn.simpleicons.org/googleforms/673AB7" alt="Google Forms" class="w-10 h-10" />
+            <img src="https://cdn.simpleicons.org/googlesheets/34A853" alt="Google Sheets" class="w-10 h-10" />
+          </div>
+
+          <a
+            href="https://docs.google.com/spreadsheets/d/1Z_zccMXD0fIWfQt4y_JUUEUQtPsYqYV6MHd3nEWGBNI"
+            target="_blank"
+            class="inline-block mt-5 px-6 py-3 bg-accent text-white rounded-full hover:bg-blue-700 transition transform hover:scale-110 shadow">
+            View Project
+          </a>
         </div>
-
-        <a
-          href="https://docs.google.com/spreadsheets/d/1Z_zccMXD0fIWfQt4y_JUUEUQtPsYqYV6MHd3nEWGBNI"
-          target="_blank"
-          class="inline-block mt-5 px-6 py-3 bg-accent text-white rounded-full hover:bg-blue-700 transition transform hover:scale-110 shadow">
-          View Project
-        </a>
       </div>
-      <!-- Project Card End -->
 
-      <!-- Project Card Start -->
-      <div
-        class="bg-gray-50 hover:bg-white border hover:shadow-2xl p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.01] mt-6">
-        <h3 class="text-xl font-semibold">
-          Remote Support Toolkit + Printer Issue Demo
-        </h3>
-        <p class="text-sm text-gray-600 mt-1">
-          <strong>Technologies:</strong> AnyDesk, Zoom, Windows Tools, Google
-          Docs
-        </p>
+      <!-- Slide 2 -->
+      <div class="swiper-slide px-20">
+        <div class="bg-gray-50 hover:bg-white border hover:shadow-2xl p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.01]">
+          <h3 class="text-xl font-semibold">Remote Support Toolkit + Printer Issue Demo</h3>
+          <p class="text-sm text-gray-600 mt-1">
+            <strong>Technologies:</strong> AnyDesk, Zoom, Windows Tools, Google Docs
+          </p>
 
-        <ul class="list-disc list-inside mt-3 space-y-1 text-sm">
-          <li>
-            Built a complete toolkit for providing remote IT support securely
-            and efficiently
-          </li>
-          <li>
-            Simulated a real-world troubleshooting case using AnyDesk and Device
-            Manager
-          </li>
-          <li>
-            Demonstrated issue resolution through driver reinstall and test
-            print confirmation
-          </li>
-          <li>
-            Documented the process with a checklist, installation guide, and
-            follow-up communication
-          </li>
-          <li>
-            Created a step-by-step screenshot walkthrough for portfolio
-            presentation
-          </li>
-        </ul>
+          <ul class="list-disc list-inside mt-3 space-y-1 text-sm">
+            <li>Built a complete toolkit for providing remote IT support securely and efficiently</li>
+            <li>Simulated a real-world troubleshooting case using AnyDesk and Device Manager</li>
+            <li>Demonstrated issue resolution through driver reinstall and test print confirmation</li>
+            <li>Documented the process with a checklist, installation guide, and follow-up communication</li>
+            <li>Created a step-by-step screenshot walkthrough for portfolio presentation</li>
+          </ul>
 
-        <!-- Tech Icons -->
-        <div class="flex items-center gap-4 mt-4">
-          <img
-            src="anydesk-logo.svg"
-            alt="AnyDesk"
-            class="w-20 h-10"
-            title="AnyDesk" />
+          <div class="flex items-center gap-4 mt-4">
+            <img src="anydesk-logo.svg" alt="AnyDesk" class="w-20 h-10" />
+            <i class="fab fa-windows text-blue-600 text-xl"></i>
+            <img src="https://cdn.simpleicons.org/zoom/2D8CFF" alt="Zoom" class="w-10 h-10" />
+            <img src="https://cdn.simpleicons.org/googledocs/34A853" alt="Google Docs" class="w-10 h-10" />
+            <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub" class="w-10 h-10" />
+          </div>
 
-          <i class="fab fa-windows text-blue-600 text-xl"></i>
-          <!-- Windows -->
-          <img
-            src="https://cdn.simpleicons.org/zoom/2D8CFF"
-            alt="Zoom"
-            class="w-10 h-10"
-            title="Zoom" />
-          <img
-            src="https://cdn.simpleicons.org/googledocs/34A853"
-            alt="Google Docs"
-            class="w-10 h-10"
-            title="Google Docs" />
-          <img
-            src="https://cdn.simpleicons.org/github/181717"
-            alt="GitHub"
-            class="w-10 h-10"
-            title="GitHub" />
+          <a
+            href="https://github.com/Misax10/remote-support-toolkit/blob/main/demos/Printer_Issue_Remote_Support_Walkthrough.md"
+            target="_blank"
+            class="inline-block mt-5 px-6 py-3 bg-accent text-white rounded-full hover:bg-blue-700 transition transform hover:scale-110 shadow">
+            View Walkthrough
+          </a>
         </div>
-
-        <a
-          href="https://github.com/Misax10/remote-support-toolkit/blob/main/demos/Printer_Issue_Remote_Support_Walkthrough.md"
-          target="_blank"
-          class="inline-block mt-5 px-6 py-3 bg-accent text-white rounded-full hover:bg-blue-700 transition transform hover:scale-110 shadow">
-          View Walkthrough
-        </a>
       </div>
-      <!-- Project Card End -->
-    </section>
 
+    </div>
+
+    <!-- Pagination Dots -->
+     
+    <div class="swiper-pagination mt-4"></div>
+    <div class="swiper-button-prev text-gray-500 hover:text-accent"></div>
+<div class="swiper-button-next text-gray-500 hover:text-accent"></div>
+    
+  </div>
+</section>
+
+    
     <section
       id="skills"
       class="bg-white max-w-4xl mx-auto mt-10 p-10 rounded-lg shadow-xl"
@@ -405,6 +371,7 @@
           <ul class="list-disc list-inside">
             <li>Microsoft 365, Outlook, Teams</li>
             <li>Active Directory</li>
+            
           </ul>
         </div>
         <div>
@@ -456,55 +423,130 @@
         format)
       </p>
     </section>
+  
+    <section id="contact" class="py-20 px-6 bg-gradient-to-br from-white to-gray-100 dark:from-gray-800 dark:to-gray-900">
+  <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 p-10 rounded-xl shadow-2xl ring-1 ring-gray-200 dark:ring-gray-700" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center text-primary dark:text-white mb-8">📬 Get In Touch</h2>
+    
+    <form id="contact-form"
+  action="https://formspree.io/f/manjwkzj"
+  method="POST"
+  class="space-y-8">
+  <input type="hidden" name="_subject" value="New message from portfolio site">
 
-    <footer class="bg-primary text-white text-center py-6 mt-10">
-      <p class="text-sm">&copy; 2025 Khoa Diep. All rights reserved.</p>
-
-      <div class="mt-4 flex justify-center space-x-6">
-        <a
-          href="https://www.facebook.com/khoadiep1006"
-          target="_blank"
-          class="transition transform hover:scale-110">
-          <img
-            src="https://cdn.simpleicons.org/facebook/ffffff"
-            alt="Facebook"
-            class="w-8 h-8" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/khoa-diep-7b2842200"
-          target="_blank"
-          class="transition transform hover:scale-110">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            viewBox="0 0 24 24"
-            fill="white"
-            class="w-8 h-8">
-            <title>LinkedIn</title>
-            <path
-              d="M20.452 20.452h-3.554v-5.568c0-1.327-.026-3.037-1.85-3.037-1.853 0-2.136 1.445-2.136 2.94v5.665H9.356V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.367-1.85 3.6 0 4.268 2.368 4.268 5.448v6.293zM5.337 7.433a2.062 2.062 0 1 1 0-4.123 2.062 2.062 0 0 1 0 4.123zM6.953 20.452H3.72V9h3.233v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
-          </svg>
-        </a>
-        <a
-          href="https://github.com/Misax10"
-          target="_blank"
-          class="transition transform hover:scale-110">
-          <img
-            src="https://cdn.simpleicons.org/github/ffffff"
-            alt="GitHub"
-            class="w-8 h-8" />
-        </a>
-        <a
-          href="https://www.instagram.com/khoadiep1006/"
-          target="_blank"
-          class="transition transform hover:scale-110">
-          <img
-            src="https://cdn.simpleicons.org/instagram/ffffff"
-            alt="Instagram"
-            class="w-8 h-8" />
-        </a>
+      <div class="relative">
+        <input type="text" id="name" name="name" required
+          class="peer h-14 w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 pt-6 text-sm bg-transparent focus:outline-none focus:ring-2 focus:ring-accent"
+          placeholder=" " />
+        <label for="name"
+          class="absolute left-4 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-accent">
+          Full Name
+        </label>
       </div>
-    </footer>
+
+      <div class="relative">
+        <input type="email" id="email" name="email" required
+          class="peer h-14 w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 pt-6 text-sm bg-transparent focus:outline-none focus:ring-2 focus:ring-accent"
+          placeholder=" " />
+        <label for="email"
+          class="absolute left-4 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-accent">
+          Email Address
+        </label>
+      </div>
+
+      
+      <div class="relative">
+        
+        <textarea id="message" name="message" rows="5" required
+          class="peer w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 pt-6 text-sm bg-transparent focus:outline-none focus:ring-2 focus:ring-accent resize-none"
+          placeholder=" "></textarea>
+        <label for="message"
+          class="absolute left-4 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-accent">
+          Your Message
+        </label>
+      </div>
+
+      <div class="text-center">
+        <button type="submit"
+          class="inline-flex items-center justify-center gap-2 bg-accent hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-xl transform transition-all duration-300 hover:scale-105">
+          <i class="fas fa-paper-plane"></i>
+          Send Message
+        </button>
+      </div>
+      <div id="form-status" class="text-sm text-center"></div>
+
+    </form>
+  </div>
+</section>
+
+
+<footer class="bg-primary text-white py-10 mt-10">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="grid sm:grid-cols-2 gap-8">
+
+      <!-- Left Column: Location + Socials -->
+      <div>
+        <h4 class="text-lg font-semibold mb-2">📍 Location</h4>
+        <p>Ho Chi Minh City, Vietnam</p>
+
+        <div class="flex space-x-6 mt-4">
+          <a href="https://www.facebook.com/khoadiep1006" target="_blank" class="hover:text-accent transition">
+            <i class="fab fa-facebook-f text-2xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/khoa-diep-7b2842200" target="_blank" class="hover:text-accent transition">
+            <i class="fab fa-linkedin-in text-2xl"></i>
+          </a>
+          <a href="https://github.com/Misax10" target="_blank" class="hover:text-accent transition">
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+          <a href="https://www.instagram.com/khoadiep1006/" target="_blank" class="hover:text-accent transition">
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
+        </div>
+        <h4 class="text-lg font-semibold mt-6 mb-2">📄 Resume</h4>
+<ul class="text-sm space-y-1">
+  <li>
+    <a href="Khoa_Diep_CV_English_Version.pdf" download class="hover:underline">
+      🇺🇸 English Version
+    </a>
+  </li>
+  <li>
+    <a href="Khoa_Diep_CV_Vietnamese_Version.pdf" download class="hover:underline">
+      🇻🇳 Vietnamese Version
+    </a>
+  </li>
+</ul>
+
+      </div>
+      
+
+      <!-- Right Column: Contact + Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold mb-2">📞 Contact</h4>
+        <p><i class="fas fa-phone-alt mr-2"></i> +84 917 672 707</p>
+        <p class="mt-1">
+          <i class="fas fa-envelope mr-2"></i>
+          <a href="mailto:khoa.diep99@gmail.com" class="underline hover:text-accent">khoa.diep99@gmail.com</a>
+        </p>
+
+        <h4 class="text-lg font-semibold mt-6 mb-2">🔗 Quick Links</h4>
+        <ul class="space-y-1 text-sm">
+          <li><a href="#projects" class="hover:underline">Projects</a></li>
+          <li><a href="#skills" class="hover:underline">Skills</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+          <li><a href="#education" class="hover:underline">Education</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Branding + Copyright -->
+    <div class="text-center mt-10">
+      <p class="italic text-sm text-gray-300">Helping teams solve IT challenges — one ticket at a time.</p>
+      <p class="text-sm text-gray-400 mt-2">&copy; 2025 Khoa Diep. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
 
     <!-- Init AOS Animations -->
     <script>
@@ -530,5 +572,92 @@
         html.classList.add("dark");
       }
     </script>
+
+  <script>
+  function showToast(message, color = 'bg-green-600') {
+    const toast = document.getElementById('toast');
+    const messageSpan = document.getElementById('toast-message');
+
+    toast.classList.remove('translate-x-full');
+    toast.classList.add(color);
+    messageSpan.textContent = message;
+    toast.style.display = 'flex';
+
+    setTimeout(() => {
+      hideToast();
+    }, 4000);
+  }
+
+  function hideToast() {
+    const toast = document.getElementById('toast');
+    toast.classList.add('translate-x-full');
+    setTimeout(() => {
+      toast.style.display = 'none';
+      toast.className = 'fixed bottom-6 right-6 z-50 hidden max-w-xs w-full px-6 py-4 rounded-lg shadow-lg text-white font-medium flex items-center justify-between transition-transform transform translate-x-full';
+    }, 300); // wait for slide-out animation to finish
+  }
+
+  const form = document.getElementById('contact-form');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (res.ok) {
+        form.reset();
+        showToast("✅ Message sent successfully!");
+      } else {
+        const data = await res.json();
+        if (data.errors) {
+          showToast("⚠️ " + data.errors.map(error => error.message).join(", "), 'bg-red-600');
+        } else {
+          throw new Error("Unknown error");
+        }
+      }
+    } catch (err) {
+      showToast("❌ Submission failed. Please try again.", 'bg-red-600');
+    }
+  });
+</script>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    effect: "slide",
+    grabCursor: true,
+    loop: true,
+    spaceBetween: 30,
+    
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+
+
+<div id="toast"
+     class="fixed bottom-6 right-6 z-50 hidden max-w-xs w-full px-6 py-4 rounded-lg shadow-lg text-white font-medium bg-green-600 flex items-center justify-between transition-transform transform translate-x-full"
+     role="alert">
+  <span id="toast-message">This is a toast message.</span>
+  <button onclick="hideToast()" class="ml-4 text-white hover:text-gray-300 text-xl font-bold leading-none focus:outline-none">
+    &times;
+  </button>
+</div>
+
+
   </body>
 </html>
