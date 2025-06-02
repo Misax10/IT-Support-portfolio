@@ -97,4 +97,15 @@ AOS.init({
       prevEl: ".swiper-button-prev",
     },
   });
-  
+
+  document.addEventListener("DOMContentLoaded", function () {
+    new Typed(".typing-role", {
+      strings: ["IT Support Specialist", "Help Desk Technician", "System Troubleshooter"],
+      typeSpeed: 70,
+      backSpeed: 40,
+      loop: true,
+      showCursor: true,
+      cursorChar: "|"
+    });
+  });
+
