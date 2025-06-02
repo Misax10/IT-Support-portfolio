@@ -109,3 +109,22 @@ AOS.init({
     });
   });
 
+
+  QRCode.toCanvas(document.getElementById("resumeQR_EN"), "https://misax10.github.io/IT-Support-portfolio/Khoa_Diep_CV_English_Version.pdf", {
+    width: 96,
+    margin: 1,
+    color: {
+      dark: "#1f2937",
+      light: "#ffffff"
+    }
+  });
+
+  QRCode.toCanvas(document.getElementById("resumeQR_VI"), "https://misax10.github.io/IT-Support-portfolio/Khoa_Diep_CV_Vietnamese_Version.pdf", {
+    width: 96,
+    margin: 1,
+    color: {
+      dark: "#1f2937",
+      light: "#ffffff"
+    }
+  });
+

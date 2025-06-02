@@ -34,6 +34,8 @@
     </script>
     <!--External CSS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
     <!-- AOS Library for scroll animations -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link
@@ -502,44 +504,68 @@
           <h4 class="font-semibold">Soft Skills</h4>
           <ul class="list-disc list-inside">
             <li>Communication</li>
-            <li>Explaining tech to users</li>
+            <li>Explaining tech to end users</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="text-center my-16 px-4" data-aos="zoom-in">
-      <div class="flex flex-col md:flex-row justify-center items-center gap-6">
-        <!-- English Resume Download -->
-        <div
-          class="inline-block p-1 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 animate-glow">
-          <a
-            href="Khoa_Diep_CV_English_Version.pdf"
-            download
-            class="inline-block px-10 py-4 bg-white text-accent font-bold text-lg rounded-full shadow-2xl transform transition-all duration-300 hover:scale-110 hover:shadow-blue-400 hover:ring-4 hover:ring-blue-300 flex items-center gap-2">
-            <span class="text-2xl animate-bounce">⬇️</span>
-            Resume (English)
-          </a>
-        </div>
+   
+    
+  <section class="text-center my-16 px-4" data-aos="zoom-in">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 justify-center items-start max-w-4xl mx-auto">
 
-        <!-- Vietnamese Resume Download -->
-        <div
-          class="inline-block p-1 rounded-full bg-gradient-to-r from-green-400 via-yellow-400 to-red-500 animate-glow">
-          <a
-            href="Khoa_Diep_CV_Vietnamese_Version.pdf"
-            download
-            class="inline-block px-10 py-4 bg-white text-accent font-bold text-lg rounded-full shadow-2xl transform transition-all duration-300 hover:scale-110 hover:shadow-green-400 hover:ring-4 hover:ring-green-300 flex items-center gap-2">
-            <span class="text-2xl animate-bounce">⬇️</span>
-            Resume (Tiếng Việt)
-          </a>
-        </div>
+    <!-- English Resume Column -->
+    <div class="flex flex-col items-center gap-4">
+      <div class="inline-block p-1 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 animate-glow">
+        <a
+          href="Khoa_Diep_CV_English_Version.pdf"
+          download
+          class="inline-block px-10 py-4 bg-white text-accent font-bold text-lg rounded-full shadow-2xl transform transition-all duration-300 hover:scale-110 hover:shadow-blue-400 hover:ring-4 hover:ring-blue-300 flex items-center gap-2">
+          <span class="text-2xl animate-bounce">⬇️</span>
+          Resume (English)
+        </a>
       </div>
-      <p class="mt-3 text-sm text-gray-600 italic">
-        Instant download of my resume in both English and Vietnamese (PDF
-        format)
-      </p>
-    </section>
+
+      <!-- QR Code + Tooltip + Caption -->
+      <a
+        href="Khoa_Diep_CV_English_Version.pdf"
+        title="📄 Scan to download English resume"
+        target="_blank"
+        class="bg-white p-3 rounded-xl shadow-lg group transform transition hover:scale-105">
+        <canvas id="resumeQR_EN" class="w-24 h-24"></canvas>
+      </a>
+      <p class="text-xs text-gray-500 mt-1">📱 Scan on mobile</p>
+    </div>
+
+    <!-- Vietnamese Resume Column -->
+    <div class="flex flex-col items-center gap-4">
+      <div class="inline-block p-1 rounded-full bg-gradient-to-r from-green-400 via-yellow-400 to-red-500 animate-glow">
+        <a
+          href="Khoa_Diep_CV_Vietnamese_Version.pdf"
+          download
+          class="inline-block px-10 py-4 bg-white text-accent font-bold text-lg rounded-full shadow-2xl transform transition-all duration-300 hover:scale-110 hover:shadow-green-400 hover:ring-4 hover:ring-green-300 flex items-center gap-2">
+          <span class="text-2xl animate-bounce">⬇️</span>
+          Resume (Tiếng Việt)
+        </a>
+      </div>
+
+      <!-- QR Code + Tooltip + Caption -->
+      <a
+        href="Khoa_Diep_CV_Vietnamese_Version.pdf"
+        title="📄 Scan to download Vietnamese resume"
+        target="_blank"
+        class="bg-white p-3 rounded-xl shadow-lg group transform transition hover:scale-105">
+        <canvas id="resumeQR_VI" class="w-24 h-24"></canvas>
+      </a>
+      <p class="text-xs text-gray-500 mt-1">📱 Scan on mobile</p>
+    </div>
+
+  </div>
+
   
+</section>
+
     <section id="contact" class="py-20 px-6 bg-gradient-to-br from-white to-gray-100 dark:from-gray-800 dark:to-gray-900">
   <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 p-10 rounded-xl shadow-2xl ring-1 ring-gray-200 dark:ring-gray-700" data-aos="fade-up">
     <h2 class="text-3xl font-bold text-center text-primary dark:text-white mb-8">📬 Get In Touch</h2>
@@ -680,6 +706,16 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  QRCode.toCanvas(document.getElementById("resumeQR"), "https://misax10.github.io/IT-Support-portfolio/Khoa_Diep_CV_English_Version.pdf", {
+    width: 80,
+    margin: 1,
+    color: {
+      dark: "#1f2937", // Tailwind primary dark gray
+      light: "#ffffff"
+    }
+  });
+</script>
 
   </body>
 </html>
