@@ -398,8 +398,7 @@
     <div class="swiper-wrapper">
       <!-- Slide 1 -->
 <div class="swiper-slide px-20">
-  <div class="bg-gray-50 hover:bg-white border hover:shadow-2xl p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.01]">
-    <img src="thumbnail1.png" alt="Project Thumbnail" class="rounded-lg w-full h-56 object-cover mb-4">
+  <div class="bg-gray-50 hover:bg-white border border-transparent hover:border-accent/60 hover:ring-4 hover:ring-accent/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-2xl">    <img src="thumbnail1.png" alt="Project Thumbnail" class="rounded-lg w-full h-56 object-cover mb-4">
     <h3 class="text-xl font-semibold">System Health Check Script with Alerts & Automation</h3>
     <p class="text-md text-gray-600 mt-1">
       <strong>Technologies:</strong> Bash, macOS Terminal, Cron, Email Utilities
@@ -441,8 +440,7 @@
 
       <!-- Slide 2 -->
       <div class="swiper-slide px-20">
-        <div class="bg-gray-50 hover:bg-white border hover:shadow-2xl p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.01]">
-          <img src="thumbnail2.png" alt="Project Thumbnail" class="rounded-lg w-full h-56 object-cover mb-4">
+        <div class="bg-gray-50 hover:bg-white border border-transparent hover:border-accent/60 hover:ring-4 hover:ring-accent/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-2xl">          <img src="thumbnail2.png" alt="Project Thumbnail" class="rounded-lg w-full h-56 object-cover mb-4">
           <h3 class="text-xl font-semibold">Help Desk Ticketing System</h3>
           <p class="text-md text-gray-600 mt-1">
             <strong>Technologies:</strong> Google Forms, Google Sheets, Python
@@ -482,8 +480,7 @@
 
       <!-- Slide 3 -->
       <div class="swiper-slide px-20">
-        <div class="bg-gray-50 hover:bg-white border hover:shadow-2xl p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.01]">
-          <img src="thumbnail3.png" alt="Project Thumbnail" class="rounded-lg w-full h-56 object-cover mb-4">
+        <div class="bg-gray-50 hover:bg-white border border-transparent hover:border-accent/60 hover:ring-4 hover:ring-accent/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-2xl">          <img src="thumbnail3.png" alt="Project Thumbnail" class="rounded-lg w-full h-56 object-cover mb-4">
           <h3 class="text-xl font-semibold">Remote Support Toolkit + Printer Issue Demo</h3>
           <p class="text-md text-gray-600 mt-1">
             <strong>Technologies:</strong> AnyDesk, Zoom, Windows Tools, Google Docs
@@ -594,59 +591,68 @@
 
    
     
-  <section class="text-center my-16 px-4" data-aos="zoom-in">
+ <section class="text-center my-16 px-4" data-aos="zoom-in">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12 justify-center items-start max-w-4xl mx-auto">
 
-    <!-- English Resume Column -->
+    <!-- CV Tiếng Anh -->
     <div class="flex flex-col items-center gap-4">
+      <!-- Nút tải -->
       <div class="inline-block p-1 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 animate-glow">
-        <a
-          href="Khoa_Diep_CV_English_Version.pdf"
-          download
+        <button
+          onclick="downloadCV('Khoa_Diep_CV_English_Version.pdf')"
           class="inline-block px-10 py-4 bg-white text-accent font-bold text-lg rounded-full shadow-2xl transform transition-all duration-300 hover:scale-110 hover:shadow-blue-400 hover:ring-4 hover:ring-blue-300 flex items-center gap-2">
           <span class="text-2xl animate-bounce">⬇️</span>
-          Resume (English)
-        </a>
+          CV (Tiếng Anh)
+        </button>
       </div>
 
-      <!-- QR Code + Tooltip + Caption -->
+      <!-- Progress bar -->
+      <div id="cv-progress-en" class="w-56 h-2 bg-gray-300 rounded mt-2 overflow-hidden hidden">
+        <div id="cv-bar-en" class="h-full bg-blue-500 w-0 transition-all duration-300 ease-linear"></div>
+      </div>
+
+      <!-- QR Code -->
       <a
         href="Khoa_Diep_CV_English_Version.pdf"
-        title="📄 Scan to download English resume"
+        title="📄 Quét mã để tải CV tiếng Anh"
         target="_blank"
         class="bg-white p-3 rounded-xl shadow-lg group transform transition hover:scale-105">
         <canvas id="resumeQR_EN" class="w-24 h-24"></canvas>
       </a>
-      <p class="text-xs text-gray-500 mt-1">📱 Scan on mobile</p>
+      <p class="text-xs text-gray-500 mt-1">📱 Quét mã bằng điện thoại</p>
     </div>
 
-    <!-- Vietnamese Resume Column -->
+    <!-- CV Tiếng Việt -->
     <div class="flex flex-col items-center gap-4">
+      <!-- Nút tải -->
       <div class="inline-block p-1 rounded-full bg-gradient-to-r from-green-400 via-yellow-400 to-red-500 animate-glow">
-        <a
-          href="Khoa_Diep_CV_Vietnamese_Version.pdf"
-          download
+        <button
+          onclick="downloadCV('Khoa_Diep_CV_Vietnamese_Version.pdf', 'vi')"
           class="inline-block px-10 py-4 bg-white text-accent font-bold text-lg rounded-full shadow-2xl transform transition-all duration-300 hover:scale-110 hover:shadow-green-400 hover:ring-4 hover:ring-green-300 flex items-center gap-2">
           <span class="text-2xl animate-bounce">⬇️</span>
-          Resume (Tiếng Việt)
-        </a>
+          CV (Tiếng Việt)
+        </button>
       </div>
 
-      <!-- QR Code + Tooltip + Caption -->
+      <!-- Progress bar -->
+      <div id="cv-progress-vi" class="w-56 h-2 bg-gray-300 rounded mt-2 overflow-hidden hidden">
+        <div id="cv-bar-vi" class="h-full bg-green-500 w-0 transition-all duration-300 ease-linear"></div>
+      </div>
+
+      <!-- QR Code -->
       <a
         href="Khoa_Diep_CV_Vietnamese_Version.pdf"
-        title="📄 Scan to download Vietnamese resume"
+        title="📄 Quét mã để tải CV tiếng Việt"
         target="_blank"
         class="bg-white p-3 rounded-xl shadow-lg group transform transition hover:scale-105">
         <canvas id="resumeQR_VI" class="w-24 h-24"></canvas>
       </a>
-      <p class="text-xs text-gray-500 mt-1">📱 Scan on mobile</p>
+      <p class="text-xs text-gray-500 mt-1">📱 Quét mã bằng điện thoại</p>
     </div>
 
   </div>
-
-  
 </section>
+
 
     <section id="contact" class="py-20 px-6 bg-gradient-to-br from-white to-gray-100 dark:from-gray-800 dark:to-gray-900">
   <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 p-10 rounded-xl shadow-2xl ring-1 ring-gray-200 dark:ring-gray-700" data-aos="fade-up">
@@ -797,6 +803,31 @@
       light: "#ffffff"
     }
   });
+</script>
+<script>
+  function downloadCV(fileUrl, lang = 'en') {
+    const bar = document.getElementById(`cv-bar-${lang}`);
+    const container = document.getElementById(`cv-progress-${lang}`);
+
+    container.classList.remove("hidden");
+    bar.style.width = "0%";
+
+    let progress = 0;
+    const interval = setInterval(() => {
+      progress += 10;
+      bar.style.width = `${progress}%`;
+
+      if (progress >= 100) {
+        clearInterval(interval);
+        container.classList.add("hidden");
+
+        const link = document.createElement("a");
+        link.href = fileUrl;
+        link.download = "";
+        link.click();
+      }
+    }, 150); // tổng cộng ~1.5s
+  }
 </script>
 
   </body>
