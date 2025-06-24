@@ -128,3 +128,19 @@ AOS.init({
     }
   });
 
+// Trong cả hai trang
+document.querySelectorAll("a[lang-switch]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    localStorage.setItem("lang", btn.getAttribute("lang-switch"));
+  });
+});
+
+// Khi load trang
+window.onload = () => {
+  const savedLang = localStorage.getItem("lang");
+  if (savedLang === "vi" && !window.location.href.includes("index-vi.html")) {
+    window.location.href = "index-vi.html";
+  } else if (savedLang === "en" && !window.location.href.includes("index.html")) {
+    window.location.href = "index.html";
+  }
+};
