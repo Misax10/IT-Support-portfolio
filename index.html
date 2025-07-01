@@ -396,9 +396,58 @@
 
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
+    <!-- Slide 4 -->
+<div class="swiper-slide px-20">
+  <div class="bg-gray-50 hover:bg-white border border-transparent hover:border-accent/60 hover:ring-4 hover:ring-accent/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-2xl">
+    <img src="thumbnail4.png" alt="Active Directory Lab" class="rounded-lg w-full h-56 object-contain mb-4">
+    
+    <h3 class="text-xl font-semibold">Active Directory Lab on Azure</h3>
+    
+    <p class="text-md text-gray-600 mt-1">
+      <strong>Technologies:</strong> Azure, Windows Server 2022, Active Directory, Windows 11, RDP
+    </p>
+
+    <ul class="list-disc list-inside mt-3 space-y-1 text-md">
+      <li>Deployed a Windows Server 2022 VM on Azure and configured it as a domain controller</li>
+      <li>Installed and managed Active Directory Domain Services (AD DS)</li>
+      <li>Created Organizational Units and sample users for testing</li>
+      <li>Joined a Windows 11 VM to the domain and tested domain logins via RDP</li>
+      <li>Documented troubleshooting steps for domain login and RDP access</li>
+    </ul>
+
+    <!-- Terminal Block -->
+    <div class="bg-black text-green-400 font-mono text-xs rounded-lg p-4 mt-4 shadow-inner">
+      <p><span class="text-blue-400">$</span> net user kevin.diep /domain</p>
+      <p>✅ User found in adlab.local</p>
+      <p><span class="text-blue-400">$</span> mstsc /v:10.0.0.5</p>
+      <p>🔐 Logging in as adlab\kevin.diep</p>
+      <p>✅ RDP session established</p>
+    </div>
+
+    <!-- Icons or Links -->
+    <div class="flex items-center gap-4 mt-4">
+  <!-- Microsoft Azure Icon -->
+  <img src="azure.png" alt="Azure" class="w-24 h-12" title="Microsoft Azure">
+
+  <!-- Windows Icon -->
+  <i class="fab fa-windows text-blue-600 text-4xl"></i>
+
+  <!-- Active Directory (using network icon as a visual stand-in) -->
+  <img src="active_directory.png" alt="Active Directory" class="w-24 h-12" title="Active Directory">
+
+  <!-- GitHub Icon -->
+  <a href="https://github.com/Misax10/azure-ad-lab" target="_blank">
+    <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub Repo" class="w-12 h-12" title="GitHub Repository">
+  </a>
+</div>
+
+  </div>
+</div>
+
+
       <!-- Slide 1 -->
 <div class="swiper-slide px-20">
-  <div class="bg-gray-50 hover:bg-white border border-transparent hover:border-accent/60 hover:ring-4 hover:ring-accent/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-2xl">    <img src="thumbnail1.png" alt="Project Thumbnail" class="rounded-lg w-full h-56 object-cover mb-4">
+  <div class="bg-gray-50 hover:bg-white border border-transparent hover:border-accent/60 hover:ring-4 hover:ring-accent/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-2xl">    <img src="thumbnail1.png" alt="Project Thumbnail" class="rounded-lg w-full h-56 object-contain mb-4">
     <h3 class="text-xl font-semibold">System Health Check Script with Alerts & Automation</h3>
     <p class="text-md text-gray-600 mt-1">
       <strong>Technologies:</strong> Bash, macOS Terminal, Cron, Email Utilities
@@ -440,7 +489,7 @@
 
       <!-- Slide 2 -->
       <div class="swiper-slide px-20">
-        <div class="bg-gray-50 hover:bg-white border border-transparent hover:border-accent/60 hover:ring-4 hover:ring-accent/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-2xl">          <img src="thumbnail2.png" alt="Project Thumbnail" class="rounded-lg w-full h-56 object-cover mb-4">
+        <div class="bg-gray-50 hover:bg-white border border-transparent hover:border-accent/60 hover:ring-4 hover:ring-accent/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-2xl">          <img src="thumbnail2.png" alt="Project Thumbnail" class="rounded-lg w-full h-56 object-contain mb-4">
           <h3 class="text-xl font-semibold">Help Desk Ticketing System</h3>
           <p class="text-md text-gray-600 mt-1">
             <strong>Technologies:</strong> Google Forms, Google Sheets, Python
@@ -480,7 +529,7 @@
 
       <!-- Slide 3 -->
       <div class="swiper-slide px-20">
-        <div class="bg-gray-50 hover:bg-white border border-transparent hover:border-accent/60 hover:ring-4 hover:ring-accent/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-2xl">          <img src="thumbnail3.png" alt="Project Thumbnail" class="rounded-lg w-full h-56 object-cover mb-4">
+        <div class="bg-gray-50 hover:bg-white border border-transparent hover:border-accent/60 hover:ring-4 hover:ring-accent/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-2xl">          <img src="thumbnail3.png" alt="Project Thumbnail" class="rounded-lg w-full h-56 object-contain mb-4">
           <h3 class="text-xl font-semibold">Remote Support Toolkit + Printer Issue Demo</h3>
           <p class="text-md text-gray-600 mt-1">
             <strong>Technologies:</strong> AnyDesk, Zoom, Windows Tools, Google Docs

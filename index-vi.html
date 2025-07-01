@@ -372,6 +372,52 @@
 
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
+      <!-- Slide 4 -->
+<div class="swiper-slide px-20">
+  <div class="bg-gray-50 hover:bg-white border border-transparent hover:border-accent/60 hover:ring-4 hover:ring-accent/20 p-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-md hover:shadow-2xl">
+    <img src="thumbnail4.png" alt="Phòng Lab Active Directory" class="rounded-lg w-full h-56 object-contain mb-4">
+    
+    <h3 class="text-xl font-semibold">Phòng Lab Active Directory trên Azure</h3>
+    
+    <p class="text-md text-gray-600 mt-1">
+      <strong>Công nghệ sử dụng:</strong> Azure, Windows Server 2022, Active Directory, Windows 11, RDP
+    </p>
+
+    <ul class="list-disc list-inside mt-3 space-y-1 text-md">
+      <li>Triển khai máy ảo Windows Server 2022 trên Azure và cấu hình làm Domain Controller</li>
+      <li>Cài đặt và quản lý dịch vụ Active Directory Domain Services (AD DS)</li>
+      <li>Tạo các Đơn vị Tổ chức (OU) và người dùng mẫu để thử nghiệm</li>
+      <li>Thêm máy ảo Windows 11 vào domain và kiểm tra đăng nhập qua RDP</li>
+      <li>Ghi lại các bước xử lý sự cố liên quan đến đăng nhập domain và truy cập RDP</li>
+    </ul>
+
+    <!-- Terminal Block -->
+    <div class="bg-black text-green-400 font-mono text-xs rounded-lg p-4 mt-4 shadow-inner">
+      <p><span class="text-blue-400">$</span> net user kevin.diep /domain</p>
+      <p>✅ Người dùng được tìm thấy trong adlab.local</p>
+      <p><span class="text-blue-400">$</span> mstsc /v:10.0.0.5</p>
+      <p>🔐 Đăng nhập với tài khoản adlab\kevin.diep</p>
+      <p>✅ Phiên RDP được thiết lập thành công</p>
+    </div>
+
+    <!-- Biểu tượng -->
+    <div class="flex items-center gap-4 mt-4">
+      <!-- Biểu tượng Microsoft Azure -->
+      <img src="azure.png" alt="Azure" class="w-24 h-12" title="Microsoft Azure">
+
+      <!-- Biểu tượng Windows -->
+      <i class="fab fa-windows text-blue-600 text-4xl" title="Windows"></i>
+
+      <!-- Biểu tượng Active Directory -->
+      <img src="active_directory.png" alt="Active Directory" class="w-24 h-12" title="Active Directory">
+
+      <!-- Biểu tượng GitHub -->
+      <a href="https://github.com/Misax10/azure-ad-lab" target="_blank">
+        <img src="https://cdn.simpleicons.org/github/181717" alt="Kho GitHub" class="w-12 h-12" title="Kho GitHub">
+      </a>
+    </div>
+  </div>
+</div>
 
       <!-- Slide 1 -->
       <div class="swiper-slide px-20">
