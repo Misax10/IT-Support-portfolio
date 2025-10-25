@@ -100,10 +100,10 @@ AOS.init({
 
   document.addEventListener("DOMContentLoaded", function () {
     new Typed(".typing-role", {
-      strings: ["IT Support Specialist", "Help Desk Technician", "System Troubleshooter"],
-      typeSpeed: 70,
+      strings: ["Technical Support Engineer at iTechwx"],
+      typeSpeed: 40,
       backSpeed: 40,
-      loop: true,
+      loop: false,
       showCursor: true,
       cursorChar: "|"
     });
